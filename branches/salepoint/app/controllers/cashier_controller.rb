@@ -1,0 +1,2 @@
+class CashierController < ApplicationController
+end
