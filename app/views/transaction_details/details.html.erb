@@ -1,0 +1,8 @@
+<% form_tag '/transaction_details/create' do %>
+	Name of Product: <%= text_field 'prod', 'product_id', "size"=>"50" %> <br><br>
+	Quantity: <%= text_field 'details', 'quantity', "size"=>"10" %><br><br>
+        <table>
+        <th><%= submit_tag 'Next' %> </th>
+        <% end %> 
+        <th><%= button_to 'End', :action => '/transaction/transaction' %></th>
+        </table>
