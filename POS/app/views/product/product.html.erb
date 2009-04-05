@@ -1,0 +1,60 @@
+<table border="0" width="800">
+<tr>
+	<td><center><%= link_to image_tag("but.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("pro.gif", :border=>0), {:controller => 'product', :action => 'product'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("edi.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("vie.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("bran.gif", :border=>0), {:controller => 'branch', :action => 'branch'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("set.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+</tr>
+<tr><td colspan="10"><hr color="#eeddff" size="5px"></td></tr>
+</table>
+<strong> List of Products </strong>
+<hr color="#eeddff" size="5px"><br>
+<div id = "notification"><%=h flash[:notice] %></div><br>
+<table cellpadding="2" width="90%" align="center">
+<colgroup>
+	<col width="200">
+	<col width="50">
+	<col width="50">
+	<col width="50">
+</colgroup>
+<tr>
+<td bgcolor="#eeddff"> <center> Product Name </td>
+<td bgcolor="#eeddff"> <center> Type </td>
+<td bgcolor="#eeddff"> <center> Unit Price </td>
+<td bgcolor="#eeddff"> <center> Stock Left </td>
+</tr>
+</table>
+<table border="1" rules="all" cellpadding="2" width="90%" align="center">
+<colgroup>
+	<col width="200">
+	<col width="50">
+	<col width="50">
+	<col width="50">
+</colgroup>
+	<% for product in @products %>
+<tr>
+	<td> <%= product.product_name %> </td>
+	<td> <center> <%= product.ptype %> </td>
+	<td> <center> <%= product.unit_price%> </td>
+	<td> </td>
+</tr>
+	<% end %>
+</table>
+<br>
+<%= link_to 'Add Product', :controller => 'product', :action => 'create' %>
+<%= link_to 'Delete Product', :controller => 'product', :action => 'delete' %>
+
+<br><br>
