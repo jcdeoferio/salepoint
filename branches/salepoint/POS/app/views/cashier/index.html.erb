@@ -1,9 +1,0 @@
-<tr>
-<td>
-Welcome, 
-<strong><%= User.find_by_userid(session[:userid]).first_name %> </strong>!
-<br> <i> <%= User.find_by_userid(session[:userid]).role %> </i>
-<br><br>
-<%= link_to 'Logout', :controller => 'login', :action => 'logout' %>
-</tr>
-</td>

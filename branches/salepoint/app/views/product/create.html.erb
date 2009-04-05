@@ -24,9 +24,9 @@
 <hr color="#eeddff" size="5px"><br>
 <br>
 <% form_tag '/product/add' do %>
-	Name of Product: <%= text_field 'product', 'product_name', "sixe"=>"50" %> <br><br>
+	Name of Product: <%= text_field 'product', 'product_name', "size"=>"50" %> <br><br>
 	Select Product Category:
-	<%= select("product", "option", [[1],[2],[3]]) %>
+	<%= select('product', 'ptype', [[1],[2],[3]]) %>
 	<br><br>
 	Unit Price: <%= text_field 'product', 'unit_price', "size"=>"20" %><br><br>
         <table>

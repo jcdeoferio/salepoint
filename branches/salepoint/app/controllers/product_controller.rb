@@ -8,6 +8,7 @@ class ProductController < ApplicationController
     
     if @product.save
       redirect_to :action => 'product'
+      flash[:notice] = "Successfully added new product."
     else
       redirect_to :action => 'new'
     end
