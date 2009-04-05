@@ -42939,3 +42939,999 @@ ActionController::RoutingError (No route matches "/stylesheets/style.css" with {
   C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:16) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 257ms (View: 252, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:16) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2009-04-05 20:42:19) [GET]
+Redirected to http://localhost:3000/
+Completed in 114ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-04-05 20:42:19) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering login/login
+Completed in 155ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:20) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-04-05 20:42:22) [POST]
+  Parameters: {"commit"=>"Go!", "authenticity_token"=>"X8DIX03bv2kPPR066tMccrWrYChOm8BZ+IxdBImZDvs=", "login"=>"123abc"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:22) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 151ms (View: 145, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:23) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:24) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 53ms (View: 49, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:24) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductController#product (for 127.0.0.1 at 2009-04-05 20:42:25) [GET]
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering product/product
+Completed in 114ms (View: 57, DB: 3) | 200 OK [http://localhost/product/product]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:25) [GET]
+
+ActionController::RoutingError (No route matches "/product/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductController#delete (for 127.0.0.1 at 2009-04-05 20:42:29) [GET]
+Rendering template within layouts/application
+Rendering product/delete
+Completed in 37ms (View: 32, DB: 0) | 200 OK [http://localhost/product/delete]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:29) [GET]
+
+ActionController::RoutingError (No route matches "/product/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductController#destroy (for 127.0.0.1 at 2009-04-05 20:42:33) [POST]
+  Parameters: {"commit"=>"Delete", "authenticity_token"=>"X8DIX03bv2kPPR066tMccrWrYChOm8BZ+IxdBImZDvs=", "product"=>{"product_name"=>"Coke"}}
+
+ArgumentError (Unknown key(s): product_name):
+  app/controllers/product_controller.rb:18:in `destroy'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (129.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:40) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 52ms (View: 46, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:40) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductController#product (for 127.0.0.1 at 2009-04-05 20:42:43) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering product/product
+Completed in 43ms (View: 22, DB: 3) | 200 OK [http://localhost/product/product]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:43) [GET]
+
+ActionController::RoutingError (No route matches "/product/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductController#product (for 127.0.0.1 at 2009-04-05 20:42:44) [GET]
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering product/product
+Completed in 47ms (View: 24, DB: 2) | 200 OK [http://localhost/product/product]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:45) [GET]
+
+ActionController::RoutingError (No route matches "/product/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:46) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 50ms (View: 44, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:46) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:47) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 59ms (View: 55, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:47) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionController#transaction (for 127.0.0.1 at 2009-04-05 20:42:49) [GET]
+  [4;35;1mTransaction Load (1.0ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transaction/transaction
+Completed in 95ms (View: 40, DB: 1) | 200 OK [http://localhost/transaction/transaction]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:49) [GET]
+
+ActionController::RoutingError (No route matches "/transaction/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:51) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 50ms (View: 46, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:52) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing BranchController#branch (for 127.0.0.1 at 2009-04-05 20:42:53) [GET]
+  [4;36;1mBranch Load (3.0ms)[0m   [0;1mSELECT * FROM "branches" [0m
+Rendering template within layouts/application
+Rendering branch/branch
+Completed in 89ms (View: 44, DB: 3) | 200 OK [http://localhost/branch/branch]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:53) [GET]
+
+ActionController::RoutingError (No route matches "/branch/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:42:55) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 156ms (View: 152, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:56) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:42:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-04-05 20:46:20) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering login/login
+Completed in 41ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:20) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-04-05 20:46:22) [POST]
+  Parameters: {"commit"=>"Go!", "authenticity_token"=>"X8DIX03bv2kPPR066tMccrWrYChOm8BZ+IxdBImZDvs=", "login"=>"123abc"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Redirected to http://localhost:3000/manager
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:46:23) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 55ms (View: 51, DB: 0) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:23) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductController#product (for 127.0.0.1 at 2009-04-05 20:46:25) [GET]
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/application
+Rendering product/product
+Completed in 57ms (View: 35, DB: 3) | 200 OK [http://localhost/product/product]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:25) [GET]
+
+ActionController::RoutingError (No route matches "/product/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionController#transaction (for 127.0.0.1 at 2009-04-05 20:46:26) [GET]
+  [4;36;1mTransaction Load (1.0ms)[0m   [0;1mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transaction/transaction
+Completed in 47ms (View: 26, DB: 1) | 200 OK [http://localhost/transaction/transaction]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:27) [GET]
+
+ActionController::RoutingError (No route matches "/transaction/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ManagerController#index (for 127.0.0.1 at 2009-04-05 20:46:28) [GET]
+Rendering template within layouts/application
+Rendering manager/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userid" = '123abc') LIMIT 1[0m
+Completed in 54ms (View: 49, DB: 1) | 200 OK [http://localhost/manager]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:28) [GET]
+
+ActionController::RoutingError (No route matches "/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing TransactionController#transaction (for 127.0.0.1 at 2009-04-05 20:46:29) [GET]
+  [4;35;1mTransaction Load (1.0ms)[0m   [0mSELECT * FROM "transactions" [0m
+Rendering template within layouts/application
+Rendering transaction/transaction
+Completed in 35ms (View: 17, DB: 1) | 200 OK [http://localhost/transaction/transaction]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:29) [GET]
+
+ActionController::RoutingError (No route matches "/transaction/jv.js" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-05 20:46:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css" with {:method=>:get}):
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)

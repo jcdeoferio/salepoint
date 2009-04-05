@@ -20,6 +20,27 @@ content="text/html; charset=utf-8" />
 	<tr>
 	   <td colspan="6">
 	   <div>
+	   	
+		
+<!-- MAIN MENU-->
+<%= request.path != '/' ? 
+'<table border="0" width="800"><tr><td>'+
+link_to (image_tag("but.gif", :border=>0), {:controller => 'manager', :action => 'index'})+
+'</td><td>'+
+link_to (image_tag("pro.gif", :border=>0), {:controller => 'product', :action => 'product'})+
+'</td><td>'+
+link_to (image_tag("edi.gif", :border=>0), {:controller => 'transaction', :action => 'transaction'})+
+'</td><td>'+
+link_to (image_tag("vie.gif", :border=>0), {:controller => 'manager', :action => 'index'})+
+'</td><td>'+
+link_to (image_tag("bran.gif", :border=>0), {:controller => 'branch', :action => 'branch'})+
+'</td><td>'+
+link_to (image_tag("set.gif", :border=>0), {:controller => 'manager', :action => 'index'})+
+'</td></tr><tr><td colspan="10"><hr color="#eeddff" size="5px"></td></tr></table>' : ''
+%>
+<!-- MAIN MENU-->
+		
+		
     	<%= yield%>
         </div>
 	   </td>
