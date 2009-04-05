@@ -24,15 +24,16 @@
 </colgroup>
 	<% for product in @products %>
 <tr>
-	<td> <%= product.product_name %> </td>
+	<td> <%= product.product_name %> <% if product.ptype %> <%= link_to 'Edit', :controller => 'product', :action => 'edit' %> <% end %> </td>
 	<td> <center> <%= product.ptype %> </td>
 	<td> <center> <%= product.unit_price%> </td>
-	<td> </td>
+	<td> <center>  </td>
 </tr>
 	<% end %>
 </table>
 <br>
 <%= link_to 'Add Product', :controller => 'product', :action => 'create' %>
 <%= link_to 'Delete Product', :controller => 'product', :action => 'delete' %>
-
+<br>
+<%= link_to 'Add Package', :controller => 'product', :action => 'package_start' %>
 <br><br>

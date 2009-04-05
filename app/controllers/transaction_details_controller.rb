@@ -4,7 +4,7 @@ class TransactionDetailsController < ApplicationController
     @current_xact = Transaction.find_by_id(1)
     @detail = @current_xact.details.new()
     @detail.transaction_id = @current_xact.id
-    @prod = Product.find_by_id(params[:prod])
+    @prod = Product.find_by_product_name(params[:prod][:product_name])
     
     @detail.product_id = @prod.id
     @detail.update_attribute("quantity", params[:details])
