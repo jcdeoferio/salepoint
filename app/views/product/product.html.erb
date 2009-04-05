@@ -22,6 +22,7 @@
 </table>
 <strong> List of Products </strong>
 <hr color="#eeddff" size="5px"><br>
+<div id = "notification"><%=h flash[:notice] %></div><br>
 <table cellpadding="2" width="90%" align="center">
 <colgroup>
 	<col width="200">
@@ -46,7 +47,7 @@
 	<% for product in @products %>
 <tr>
 	<td> <%= product.product_name %> </td>
-	<td> <center> <%= product.option %> </td>
+	<td> <center> <%= product.ptype %> </td>
 	<td> <center> <%= product.unit_price%> </td>
 	<td> </td>
 </tr>

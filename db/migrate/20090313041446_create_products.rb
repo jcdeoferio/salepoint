@@ -2,7 +2,7 @@ class CreateProducts < ActiveRecord::Migration
   def self.up
     create_table :products do |t|
       t.string :product_name
-      t.integer :option
+      t.integer :ptype
       t.integer :unit_price
 
       t.timestamps
