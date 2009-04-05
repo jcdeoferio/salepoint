@@ -9,46 +9,29 @@ content="text/html; charset=utf-8" />
 <%= stylesheet_link_tag 'style' %>
 </head>
 <body bgcolor="#eeddff">
-<table border="3px" bordercolor="#cc33ff" align="center" height="100" width="800">
-<tr><td>
-<table bgcolor="#ffffff" border="0" width="800">
-	<tr>
-		<td colspan="6" bgcolor="#ccccff">
-		  <%= image_tag("pos.gif", :height=>105, :width=>800)%>
-		</td>
-	</tr>
-	<tr>
-	   <td colspan="6">
-	   <div>
-	   	
-		
-<!-- MAIN MENU-->
-<%= request.path != '/' ? 
-'<table border="0" width="800"><tr><td>'+
-link_to (image_tag("but.gif", :border=>0), {:controller => 'manager', :action => 'index'})+
-'</td><td>'+
-link_to (image_tag("pro.gif", :border=>0), {:controller => 'product', :action => 'product'})+
-'</td><td>'+
-link_to (image_tag("edi.gif", :border=>0), {:controller => 'transaction', :action => 'transaction'})+
-'</td><td>'+
-link_to (image_tag("vie.gif", :border=>0), {:controller => 'manager', :action => 'index'})+
-'</td><td>'+
-link_to (image_tag("bran.gif", :border=>0), {:controller => 'branch', :action => 'branch'})+
-'</td><td>'+
-link_to (image_tag("set.gif", :border=>0), {:controller => 'manager', :action => 'index'})+
-'</td></tr><tr><td colspan="10"><hr color="#eeddff" size="5px"></td></tr></table>' : ''
-%>
-<!-- MAIN MENU-->
-		
-		
-    	<%= yield%>
-        </div>
-	   </td>
-	</tr>
-</table>
+	
+<div id="main">
+	<div id="header">
+	  <%= image_tag("pos.gif", :height=>105, :width=>800)%>
+	</div>
+	<div id="content">
+		<!-- MAIN MENU-->
+		<%= request.path != '/' ? 
+		link_to(image_tag("home.png", :border=>0), {:controller => 'manager', :action => 'index'})+'&nbsp;&nbsp;'+
+		link_to(image_tag("products.png", :border=>0), {:controller => 'product', :action => 'product'})+'&nbsp;&nbsp;'+
+		link_to(image_tag("editdata.png", :border=>0), {:controller => 'transaction', :action => 'transaction'})+'&nbsp;'+
+		link_to(image_tag("viewdata.png", :border=>0), {:controller => 'manager', :action => 'index'})+'&nbsp;'+
+		link_to(image_tag("branches.png", :border=>0), {:controller => 'branch', :action => 'branch'})+'&nbsp;'+
+		link_to(image_tag("settings.png", :border=>0), {:controller => 'manager', :action => 'index'})+
+		'<hr color="#eeddff" size="5px">' : ''
+		%>
+		<!-- MAIN MENU-->
+		<%= yield%>
+	</div>
+	<div id="footer">
+		Copyright (c) 2009
+	</div>
+</div>
 
-</td>
-</tr>
-</table>
 </body>
 </html>

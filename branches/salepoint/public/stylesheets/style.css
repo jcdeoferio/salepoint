@@ -1,0 +1,31 @@
+#notification {
+    color: green;
+    background-color: #33333;
+    font-weight: bold;
+}
+div#header{
+	background-color:#ccccff;
+}
+div#main{
+	background-color: #fff;
+	border: 3px solid #cc33ff;
+	margin: auto;
+	padding: 2px;
+	width: 800px;
+	text-align:left;
+	min-height:600px;
+}
+div#content{
+	min-height:445px;
+	font-family: calibri,arial,sans-serif;
+}
+div#footer{
+font-family: calibri,arial,sans-serif;
+padding:0px;
+background: #ccc;
+clear:both;
+font-size: 10pt;
+text-align:center;
+line-height:50px;
+color:#000;
+}
