@@ -1,0 +1,31 @@
+<table border="0" width="800">
+<tr>
+	<td><center><%= link_to image_tag("but.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("pro.gif", :border=>0), {:controller => 'product', :action => 'product'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("edi.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("vie.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("bran.gif", :border=>0), {:controller => 'branch', :action => 'branch'} %>
+	</td>
+	<td>
+		<center><%= link_to image_tag("set.gif", :border=>0), {:controller => 'manager', :action => 'index'} %>
+	</td>
+</tr>
+<tr><td colspan="10"><hr color="#eeddff" size="5px"></td></tr>
+</table>
+
+<% form_tag '/transaction_details/create' do %>
+	Name of Product: <%= text_field 'prod', 'product_id', "size"=>"50" %> <br><br>
+	Quantity: <%= text_field 'details', 'quantity', "size"=>"10" %><br><br>
+        <table>
+        <th><%= submit_tag 'Next' %> </th>
+        <% end %> 
+        <th><%= button_to 'End', :action => '/transaction/transaction' %></th>
+        </table>
