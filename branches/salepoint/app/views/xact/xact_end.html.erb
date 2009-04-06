@@ -1,0 +1,22 @@
+<strong> Transaction Aftermath </strong>
+<hr color="#eeddff" size="5px">
+<table border="1" rules="all" cellpadding="2">
+<colgroup>
+	<col width="70">
+	<col width="150">
+	<col width="70">
+</colgroup>
+<tr>
+<td> Quantity </td>
+<td> Product </td>
+<td> Price </td>
+</tr>
+<% for detail in @details %>
+<tr>
+<td> <%= detail.quantity %>
+<td> <%= Product.find_by_id(detail.product_id).product_name %> </td>
+<td> <%= detail.price%>
+</tr>
+<% end %>
+</table> <br>
+<strong> Total = P<%= @curr_xact.total %> </strong>

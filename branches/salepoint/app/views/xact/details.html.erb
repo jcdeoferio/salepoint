@@ -1,0 +1,39 @@
+<strong> Transaction Details </strong>
+<hr color="#eeddff" size="5px"><br>
+<table cellpadding="2" width="90%" align="center">
+<colgroup>
+	<col width ="170">
+	<col width ="170">
+</colgroup>
+<tr> <td>
+<% form_tag '/xact/add_details' do %>
+	Name of Product: <%= text_field 'product', 'product_name', "size"=>"30" %> <br><br>
+	Quantity: <%= text_field 'quantity', 'qty', "size"=>"10" %><br><br>
+        <table>
+        <th><%= button_to 'Next', :controller => 'xact', :action => 'details' %> </th>
+        <% end %> 
+        <th><%= button_to 'End', :action => 'xact_end' %></th>
+        </table>
+</td>
+<td>
+<table border="1" rules="all" cellpadding="2">
+<colgroup>
+	<col width="70">
+	<col width="150">
+	<col width="70">
+</colgroup>
+<tr>
+<td> Quantity </td>
+<td> Product </td>
+<td> Price </td>
+</tr>
+<% for detail in @details %>
+<tr>
+<td> <%= detail.quantity %>
+<td> <%= Product.find_by_id(detail.product_id).product_name %> </td>
+<td> <%= detail.price%>
+</tr>
+<% end %>
+</table>
+</td></tr>
+</table>

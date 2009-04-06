@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090404124722) do
+ActiveRecord::Schema.define(:version => 20090406115753) do
 
   create_table "branches", :force => true do |t|
     t.string   "branch_name"
@@ -40,8 +40,18 @@ ActiveRecord::Schema.define(:version => 20090404124722) do
     t.datetime "updated_at"
   end
 
-  create_table "transaction_details", :force => true do |t|
-    t.integer  "transaction_id"
+  create_table "users", :force => true do |t|
+    t.string   "userid"
+    t.string   "role"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "branch_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "xact_details", :force => true do |t|
+    t.integer  "xact_id"
     t.integer  "product_id"
     t.integer  "quantity"
     t.integer  "price"
@@ -49,20 +59,11 @@ ActiveRecord::Schema.define(:version => 20090404124722) do
     t.datetime "updated_at"
   end
 
-  create_table "transactions", :force => true do |t|
+  create_table "xacts", :force => true do |t|
     t.date     "date"
     t.integer  "user_id"
+    t.integer  "qty"
     t.integer  "total"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "userid"
-    t.string   "role"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "branch_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

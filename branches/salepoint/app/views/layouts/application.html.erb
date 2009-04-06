@@ -18,8 +18,8 @@ content="text/html; charset=utf-8" />
 		<!-- MAIN MENU-->
 		<%= request.path != '/' ? 
 		link_to(image_tag("home.png", :border=>0), {:controller => 'manager', :action => 'index'})+'&nbsp;&nbsp;'+
-		link_to(image_tag("products.png", :border=>0), {:controller => 'product', :action => 'product'})+'&nbsp;&nbsp;'+
-		link_to(image_tag("editdata.png", :border=>0), {:controller => 'transaction', :action => 'transaction'})+'&nbsp;'+
+		link_to(image_tag("products.png", :border=>0), {:controller => 'product', :action => 'index'})+'&nbsp;&nbsp;'+
+		link_to(image_tag("editdata.png", :border=>0), {:controller => 'xact', :action => 'index'})+'&nbsp;'+
 		link_to(image_tag("viewdata.png", :border=>0), {:controller => 'manager', :action => 'index'})+'&nbsp;'+
 		link_to(image_tag("branches.png", :border=>0), {:controller => 'branch', :action => 'branch'})+'&nbsp;'+
 		link_to(image_tag("settings.png", :border=>0), {:controller => 'manager', :action => 'index'})+
