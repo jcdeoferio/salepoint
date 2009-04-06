@@ -1,0 +1,20 @@
+<strong> Add New Package </strong>
+<hr color="#eeddff" size="5px"><br>
+<br/>
+<% form_tag '/product/add_package' do %>
+	Name of Package: <%= text_field 'product', 'product_name', "size"=>"50" %> <br/><br/>
+	Package Price: <%= text_field 'product', 'unit_price', "size"=>"20" %><br/><br/>
+<!--
+	<%=@prods%>
+	<%=@package%>
+-->
+	<% for product in @productsF%>
+		<%if product%>
+			<%=check_box_tag('products[]', product.id, false)%>
+			<%=product.product_name%><br/>
+		<%end%>
+	<%end%>
+	<%= submit_tag 'Submit' %>
+	<%= button_to 'Cancel', :action => 'product' %>
+
+<%end%>

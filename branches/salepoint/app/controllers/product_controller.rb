@@ -73,8 +73,39 @@ class ProductController < ApplicationController
   
 	def destroy
 		@product = Product.find_by_id(params[:id])
-		flash[:notice] = "Successfully deleted product " + @product.product_name
+		flash[:notice] = "Successfully deleted product"
 		@product.destroy
 		redirect_to :action => 'index'
 	end
+	
+	 def add_package
+    @products = Product.find(:all,:conditions => ['ptype != ?',5])
+    @productsF = Array.new
+    for prod in @products
+      @productsF[prod.id] = prod
+    end
+    if(defined?params[:product] and defined?params[:products])
+      
+      @prods = params[:products]
+      @package = params[:product]
+  
+      @prod = Product.new params[:product]
+      @prod.update_attribute("ptype", 5)
+
+      if @prod.save
+        @productb = @prod.product_branches.new()
+        @productb.product_id = @prod.id
+        @productb.branch_id = User.find_by_userid(session[:userid]).branch_id
+        session[:id] = @prod.id
+        @productb.save
+      end
+      
+#      for productid in @prods
+#        @pd = Product_details.new productid
+#        @prod.update_attribute("ptype", 5)
+#        @pd.save
+#      end
+    end
+  end
+	
 end
