@@ -1,0 +1,2 @@
+module XactHelper
+end
