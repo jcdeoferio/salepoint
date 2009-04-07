@@ -1,0 +1,80 @@
+Unable to load order_detail, underlying cause no such file to load -- order_detail 
+
+ C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:155:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:262:in `require_or_load'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:221:in `depend_on'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:133:in `require_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:856:in `try_to_load_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:871:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:851:in `fixtures'
+E:\POS\test/test_helper.rb:35
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test\unit\user_test.rb:1
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Documents and Settings/ruzette/My Documents/Aptana Studio/.metadata/.plugins/org.rubypeople.rdt.testunit/ruby/RemoteTestRunner.rb:302
+Unable to load package_detail, underlying cause no such file to load -- package_detail 
+
+ C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:155:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:262:in `require_or_load'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:221:in `depend_on'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:133:in `require_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:856:in `try_to_load_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:871:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:851:in `fixtures'
+E:\POS\test/test_helper.rb:35
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test\unit\user_test.rb:1
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Documents and Settings/ruzette/My Documents/Aptana Studio/.metadata/.plugins/org.rubypeople.rdt.testunit/ruby/RemoteTestRunner.rb:302
+Unable to load transaction_type, underlying cause no such file to load -- transaction_type 
+
+ C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:155:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:262:in `require_or_load'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:221:in `depend_on'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:133:in `require_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:856:in `try_to_load_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:871:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:851:in `fixtures'
+E:\POS\test/test_helper.rb:35
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test\unit\user_test.rb:1
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Documents and Settings/ruzette/My Documents/Aptana Studio/.metadata/.plugins/org.rubypeople.rdt.testunit/ruby/RemoteTestRunner.rb:302
+Unable to load package, underlying cause no such file to load -- package 
+
+ C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:155:in `require'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:262:in `require_or_load'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:221:in `depend_on'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:133:in `require_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:856:in `try_to_load_dependency'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:871:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/fixtures.rb:851:in `fixtures'
+E:\POS\test/test_helper.rb:35
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./test\unit\user_test.rb:1
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+C:/Documents and Settings/ruzette/My Documents/Aptana Studio/.metadata/.plugins/org.rubypeople.rdt.testunit/ruby/RemoteTestRunner.rb:302

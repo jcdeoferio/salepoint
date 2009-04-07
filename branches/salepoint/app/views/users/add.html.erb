@@ -1,0 +1,26 @@
+<table border="0" align="center" cellspacing="2">
+	<tr>
+		<td><b>Staff Options: </b></td>
+		<td><%= link_to 'View', {:controller => 'users', :action => 'view'} %></td><td>|</td>
+		<td><%= link_to 'Edit', {:controller => 'users', :action => 'edit_choose'} %></td><td>|</td>
+		<td><%= link_to 'Add', {:controller => 'users', :action => 'add'} %></td><td>|</td>
+		<td><%= link_to 'Delete', {:controller => 'users', :action => 'delete_choose'} %></td>
+	</tr>
+</table>
+<hr>
+<br>
+<h2>Add an Employee</h2>
+
+<form action="\users\add">
+	<b>Login ID : </b>&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name="loginid" size='15'><br><br>
+	<b>First Name : </b><input type='text' name="firstname" size='24'><br><br>
+	<b>Last Name : </b>&nbsp;<input type='text' name="lastname" size='24'> <br><br>
+	<b>Role : </b> <select name=”role” >
+						<option value=”Manager”>Manager
+						<option value=”Cashier”>Cashier
+						<option value=”Administrator”>Administrator
+				</select> <br><br>
+	<b>Branch Location ID Number : </b><input type = 'text' name="branchid" size='5'><br><br>
+	<input type='submit' value="Add Staff">
+</form>
+<br>

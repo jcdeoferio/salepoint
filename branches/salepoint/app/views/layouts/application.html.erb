@@ -17,16 +17,21 @@ content="text/html; charset=utf-8" />
 	<div id="content">
 		<!-- MAIN MENU-->
 		<%= request.path != '/' ? 
-		link_to(image_tag("home.png", :border=>0), {:controller => 'manager', :action => 'index'})+'&nbsp;&nbsp;'+
-		link_to(image_tag("products.png", :border=>0), {:controller => 'product', :action => 'index'})+'&nbsp;&nbsp;'+
-		link_to(image_tag("editdata.png", :border=>0), {:controller => 'xact', :action => 'index'})+'&nbsp;'+
-		link_to(image_tag("viewdata.png", :border=>0), {:controller => 'manager', :action => 'index'})+'&nbsp;'+
-		link_to(image_tag("branches.png", :border=>0), {:controller => 'branch', :action => 'branch'})+'&nbsp;'+
-		link_to(image_tag("settings.png", :border=>0), {:controller => 'manager', :action => 'index'})+
+		link_to(image_tag("home.png", :border=>0, :size=>'110x60'), {:controller => 'manager', :action => 'index'})+'&nbsp;&nbsp;'+
+		link_to(image_tag("products.png", :border=>0, :size=>'105x60'), {:controller => 'product', :action => 'index'})+'&nbsp;&nbsp;'+
+		link_to(image_tag("editdata.png", :border=>0, :size=>'105x60'), {:controller => 'xact', :action => 'index'})+'&nbsp;'+
+		link_to(image_tag("viewdata.png", :border=>0, :size=>'105x60'), {:controller => 'manager', :action => 'index'})+'&nbsp;'+
+		link_to(image_tag("branches.png", :border=>0, :size=>'105x60'), {:controller => 'branch', :action => 'branch'})+'&nbsp;'+
+		link_to(image_tag("users.png",  :border=>0, :size=>'105x60'), {:controller => 'users', :action =>'index'}) + '&nbsp;' + 
+		link_to(image_tag("settings.png", :border=>0, :size=>'105x60'), {:controller => 'manager', :action => 'index'})+
+
 		'<hr color="#eeddff" size="5px">' : ''
 		%>
 		<!-- MAIN MENU-->
 		<%= yield%>
+		<!-- User Management 
+		
+		-->
 	</div>
 	<div id="footer">
 		Copyright (c) 2009
