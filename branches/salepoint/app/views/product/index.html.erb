@@ -16,7 +16,7 @@
 	</tr>
 	<% for product in @products %>
 	<tr>
-		<td> <%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.id} %>
+		<td> <%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.id} %> <%= link_to 'Delete', {:controller => 'product', :action => 'destroy', :id => product.id} %>
 		<td> <center> <%= product.ptype %> </td>
 		<td> <center> <%= product.unit_price%> </td>
 		<td> <center> <%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.id, @curr_user.branch_id]).first.stock %> </td>

@@ -1,0 +1,69 @@
+Products
+<table class="generic" align="center">
+	<colgroup>
+		<col width="200">
+		<col width="50">
+		<col width="50">
+		<col width="50">
+	</colgroup>
+	<tr>
+		<th>Product Name</th>
+		<th>Type</th>
+		<th>Unit Price</th>
+		<th>Stock Left</th>
+	</tr>
+	<% for product in @products %>
+	<tr>
+		<td><%= product.product_name %> <%= link_to 'Sales', {:controller => 'statistics', :action => 'productSales', :id => product.id} %></td>
+		<td><%= product.ptype %></td>
+		<td><%= product.unit_price%></td>
+		<td><%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.id, @curr_user.branch_id]).first.stock %> </td>
+	</tr>
+	<% end %>
+</table>
+
+Users
+<table class="generic" align="center">
+	<tr>
+		<th>Login ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Position</th>
+		<th>Branch</th>
+		<th>Staff Since</th>
+	</tr>
+	<% for user in @users %>
+		<tr>
+			<td><%= user.userid%> <%= link_to 'Sales', {:controller => 'statistics', :action => 'userSales', :id => user.id} %></td>
+			<td><%= user.first_name%></td>
+			<td><%= user.last_name%></td>
+			<td><% if user.role == "Manager" || user.role == "Administrator"%><b><%= user.role%></b><%else%><%= user.role%><%end%></td>
+			<td><%= user.branch_id%></td>
+			<td><%= user.created_at%></td>
+		</tr>
+	<%end%>
+</table>
+
+Branches
+<table class="generic" align="center">
+	<colgroup>
+		<col width="75">
+		<col width="50">
+		<col width="150">
+		<col width="75">
+	</colgroup>
+	<tr>
+		<th>Branch Name</th>
+		<th>Contact No.</th>
+		<th>Address</th>
+		<th>Manager</th>
+	</tr>
+<% for branch in @branches %>
+	<tr>
+		<td><%= branch.branch_name %> <%= link_to 'Sales', {:controller => 'statistics', :action => 'branchSales', :id => branch.id} %></td>
+		<td></td>
+		<td><%= branch.branch_address%></td>
+		<td></td>
+	</tr>
+<% end %>
+</table>
