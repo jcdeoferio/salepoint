@@ -1,0 +1,17 @@
+<table class="generic" align="center">
+	<tr>
+		<th>id</th>
+		<th>date</th>
+		<th>quantity</th>
+		<th>total</th>
+	</tr>
+	<% for xact in @xacts %>
+	<tr>
+		<td><%=xact.id%></td>
+		<td><%=xact.date%></td>
+		<td><%=xact.qty%></td>
+		<td><%=xact.total%></td>
+	</tr>
+	<%end%>
+</table>
+			
