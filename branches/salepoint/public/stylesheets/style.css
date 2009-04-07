@@ -29,3 +29,13 @@ text-align:center;
 line-height:50px;
 color:#000;
 }
+table.generic{
+	width:90%;
+}
+table.generic th{
+	background : #edf;
+	font-weight: bold;
+}
+table.generic td{
+	background : #eee;
+}

@@ -9,7 +9,7 @@
 	Unit Price: <%= text_field 'product', 'unit_price', "size"=>"20" %><br><br>
 	Stock: <%= text_field 'stockno', 'stock', "size"=>"10" %><br><br>
         <table>
-        <th><%= submit_tag 'Submit' %> </th>
-        <% end %> 
+        <th><%= submit_tag 'Submit' %> </th> 
+		<% end %>
         <th><%= button_to 'Cancel', :action => 'index' %></th>
         </table>

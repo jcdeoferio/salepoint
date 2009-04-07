@@ -1,34 +1,26 @@
 <strong> List of Products </strong>
 <hr color="#eeddff" size="5px"><br>
 <div id = "notification"><%=h flash[:notice] %></div><br>
-<table cellpadding="2" width="90%" align="center">
-<colgroup>
-	<col width="200">
-	<col width="50">
-	<col width="50">
-	<col width="50">
-</colgroup>
-<tr>
-<td bgcolor="#eeddff"> <center> Product Name </td>
-<td bgcolor="#eeddff"> <center> Type </td>
-<td bgcolor="#eeddff"> <center> Unit Price </td>
-<td bgcolor="#eeddff"> <center> Stock Left </td>
-</tr>
-</table>
-<table border="1" rules="all" cellpadding="2" width="90%" align="center">
-<colgroup>
-	<col width="200">
-	<col width="50">
-	<col width="50">
-	<col width="50">
-</colgroup>
+<table class="generic" align="center">
+	<colgroup>
+		<col width="200">
+		<col width="50">
+		<col width="50">
+		<col width="50">
+	</colgroup>
+	<tr>
+		<th>Product Name</th>
+		<th>Type</th>
+		<th>Unit Price</th>
+		<th>Stock Left</th>
+	</tr>
 	<% for product in @products %>
-<tr>
-	<td> <%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.id} %>
-	<td> <center> <%= product.ptype %> </td>
-	<td> <center> <%= product.unit_price%> </td>
-	<td> <center> <%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.id, @curr_user.branch_id]).first.stock %> </td>
-</tr>
+	<tr>
+		<td> <%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.id} %>
+		<td> <center> <%= product.ptype %> </td>
+		<td> <center> <%= product.unit_price%> </td>
+		<td> <center> <%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.id, @curr_user.branch_id]).first.stock %> </td>
+	</tr>
 	<% end %>
 </table>
 <br><!--

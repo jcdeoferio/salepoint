@@ -1,33 +1,24 @@
 <strong> List of Branches </strong>
 <hr color="#eeddff" size="5px"><br>
-<table cellpadding="2" width="90%" align="center">
-<colgroup>
-	<col width="75">
-	<col width="50">
-	<col width="150">
-	<col width="75">
-</colgroup>
-<tr>
-<td bgcolor="#eeddff"> <center> Branch Name </td>
-<td bgcolor="#eeddff"> <center> Contact No. </td>
-<td bgcolor="#eeddff"> <center> Address </td>
-<td bgcolor="#eeddff"> <center> Manager </td>
-</tr>
+<table class="generic" align="center">
+	<colgroup>
+		<col width="75">
+		<col width="50">
+		<col width="150">
+		<col width="75">
+	</colgroup>
+	<tr>
+		<th>Branch Name</th>
+		<th>Contact No.</th>
+		<th>Address</th>
+		<th>Manager</th>
+	</tr>
+<% for branch in @branches %>
+	<tr>
+		<td><%= branch.branch_name %></td>
+		<td></td>
+		<td><%= branch.branch_address%></td>
+		<td></td>
+	</tr>
+<% end %>
 </table>
-<table border="1" rules="all" cellpadding="2" width="90%" align="center">
-<colgroup>
-	<col width="75">
-	<col width="50">
-	<col width="150">
-	<col width="75">
-</colgroup>
-	<% for branch in @branches %>
-<tr>
-	<td> <%= branch.branch_name %> </td>
-	<td> <center>  </td>
-	<td> <%= branch.branch_address%> <center>  </td>
-	<td>  </td>
-</tr>
-	<% end %>
-</table>
-<br>
