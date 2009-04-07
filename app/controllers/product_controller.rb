@@ -84,10 +84,9 @@ class ProductController < ApplicationController
     for prod in @products
       @productsF[prod.id] = prod
     end
-    if(defined?params[:product] and defined?params[:products])
+    if(params[:products] != nil)
       
       @prods = params[:products]
-      @package = params[:product]
   
       @prod = Product.new params[:product]
       @prod.update_attribute("ptype", 5)
@@ -96,15 +95,14 @@ class ProductController < ApplicationController
         @productb = @prod.product_branches.new()
         @productb.product_id = @prod.id
         @productb.branch_id = User.find_by_userid(session[:userid]).branch_id
-        session[:id] = @prod.id
         @productb.save
+        for productid in @prods
+          @pd = @prod.product_details.new
+          @pd.update_attribute("product_id",productid)
+          @pd.save
+        end
       end
-      
-#      for productid in @prods
-#        @pd = Product_details.new productid
-#        @prod.update_attribute("ptype", 5)
-#        @pd.save
-#      end
+      flash[:notice] = "Successfully added package"
     end
   end
 	
