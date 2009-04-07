@@ -1,7 +1,12 @@
-<font face ="arial">
-<h1>Users index</h1>
-<% for user in @users do %>
-	<%= user.username %>
-	<br>
-<% end %>
-</font>
+<table border="0" align="center" cellspacing="2">
+	<tr>
+		<td><b>Staff Options: </b></td>
+		<td><%= link_to 'View', {:controller => 'users', :action => 'view'} %></td><td>|</td>
+		<td><%= link_to 'Edit', {:controller => 'users', :action => 'edit_choose'} %></td><td>|</td>
+		<td><%= link_to 'Add', {:controller => 'users', :action => 'add'} %></td><td>|</td>
+		<td><%= link_to 'Delete', {:controller => 'users', :action => 'delete_choose'} %></td>
+	</tr>
+</table>
+<hr>
+	
+	

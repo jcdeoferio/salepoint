@@ -1,0 +1,33 @@
+<table border="0" align="center" cellspacing="2">
+	<tr>
+		<td><b>Staff Options: </b></td>
+		<td><%= link_to 'View', {:controller => 'users', :action => 'view'} %></td><td>|</td>
+		<td><%= link_to 'Edit', {:controller => 'users', :action => 'edit_choose'} %></td><td>|</td>
+		<td><%= link_to 'Add', {:controller => 'users', :action => 'add'} %></td><td>|</td>
+		<td><%= link_to 'Delete', {:controller => 'users', :action => 'delete_choose'} %></td>
+	</tr>
+</table>
+<hr><br>
+<table border="1" cellpadding="6" cellspacing="1" align="center" bordercolor="black">
+	
+	<tr bgcolor="#cccccc">
+		<td>Login ID</td>
+		<td>First Name</td>
+		<td>Last Name</td>
+		<td>Position</td>
+		<td>Branch</td>
+		<td>Staff Since</td>
+	</tr>
+	<% for user in @users %>
+		<tr>
+			<td><%= user.userid%></td>
+			<td><%= user.first_name%></td>
+			<td><%= user.last_name%></td>
+			<td><% if user.role == "Manager" || user.role == "Administrator"%><b><%= user.role%></b><%else%><%= user.role%><%end%></td>
+			<td><%= user.branch_id%></td>
+			<td><%= user.created_at%></td>
+		</tr>
+	<%end%>
+
+</table>
+<br>
