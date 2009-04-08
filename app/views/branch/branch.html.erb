@@ -1,4 +1,9 @@
-<strong> List of Branches </strong>
+<table width="100%">
+	<tr>
+	<td> <strong> List of Branches </strong> </td>
+	<td align="right"> <%= link_to 'Logout', :controller => 'login', :action => 'logout' %> </td>
+	</tr>
+</table>
 <hr color="#eeddff" size="5px"><br>
 <table class="generic" align="center">
 	<colgroup>
@@ -6,19 +11,32 @@
 		<col width="50">
 		<col width="150">
 		<col width="75">
+		<% if @curr_user.role == 'Administrator' %>
+			<col width="50">
+		<% end %>
 	</colgroup>
 	<tr>
 		<th>Branch Name</th>
 		<th>Contact No.</th>
 		<th>Address</th>
 		<th>Manager</th>
+		<% if @curr_user.role == 'Administrator' %>
+			<th> </th>
+		<% end %>
 	</tr>
 <% for branch in @branches %>
 	<tr>
 		<td><%= branch.branch_name %></td>
-		<td></td>
+		<td><%= branch.contact_no %></td>
 		<td><%= branch.branch_address%></td>
 		<td></td>
+		<% if @curr_user.role == 'Administrator' %> <td>
+			<%= link_to 'Edit', :controller => 'branch', :action => 'edit', :id => branch.id %>
+			<%= link_to 'Delete', :controller => 'branch', :action => 'destroy', :id => branch.id %>
+		</td> <% end %>
 	</tr>
 <% end %>
 </table>
+<% if @curr_user.role == 'Administrator' %>
+<%= link_to 'Add', :controller => 'branch', :action => 'new' %>
+<% end %>

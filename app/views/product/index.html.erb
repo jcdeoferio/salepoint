@@ -1,4 +1,9 @@
-<strong> List of Products </strong>
+<table width="100%">
+	<tr>
+	<td> <strong> List of Products </strong> </td>
+	<td align="right"> <%= link_to 'Logout', :controller => 'login', :action => 'logout' %> </td>
+	</tr>
+</table>
 <hr color="#eeddff" size="5px"><br>
 <div id = "notification"><%=h flash[:notice] %></div><br>
 <table class="generic" align="center">
@@ -7,27 +12,63 @@
 		<col width="50">
 		<col width="50">
 		<col width="50">
+		<% if @curr_user.role=='Administrator' %>
+		<col width = "50">
+		<% end %>
 	</colgroup>
 	<tr>
 		<th>Product Name</th>
 		<th>Type</th>
 		<th>Unit Price</th>
 		<th>Stock Left</th>
+		<% if @curr_user.role=='Administrator' %>
+		<th>Branch</th>
+		<% end %>
 	</tr>
 	<% for product in @products %>
 	<tr>
-		<td> <%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.id} %> <%= link_to 'Delete', {:controller => 'product', :action => 'destroy', :id => product.id} %>
+		<% if @curr_user.role!='Administrator' %>
+		<td>
+		<%= Product.find_by_id(product.product_id).product_name %> 
+		<% if @curr_user.role == 'Manager' %>
+		<%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.product_id} %>
+		<%= link_to 'Delete', {:controller => 'product', :action => 'destroy', :id => product.product_id} %>
+		<% end %>
+		</td>
+		<td> <center> <%= Product.find_by_id(product.product_id).ptype %> </td>
+		<td> <center> <%= Product.find_by_id(product.product_id).unit_price %> </td>
+		<% else %>
+		<td>
+		<%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'editf', :id => product.id} %>
+		<%= link_to 'Delete', {:controller => 'product', :action => 'destroy_admin', :id => product.id} %>
+		<%= link_to 'Add Branch', {:controller => 'product', :action => 'branch', :id => product.id} %>
+		</td>
 		<td> <center> <%= product.ptype %> </td>
-		<td> <center> <%= product.unit_price%> </td>
-		<td> <center> <%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.id, @curr_user.branch_id]).first.stock %> </td>
+		<td> <center> <%= product.unit_price %> </td>
+		<% end %>
+		<td> <center> 
+		<% if @curr_user.role != 'Administrator' and ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.product_id, @curr_user.branch_id]).first!=nil %>
+			<%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.product_id, @curr_user.branch_id]).first.stock %>
+		<% else %> <% for pbranch in @pbranch %>
+			<% if pbranch.product_id == product.id %>
+			<%= pbranch.stock %><br>
+			<% end %>
+			<% end %>
+		<% end %>
+		</td>
+		<% if @curr_user.role == 'Administrator' %>
+		<td> <center>
+		<% for pbranch in @pbranch %>
+		<% if pbranch.product_id == product.id %>
+		<%= Branch.find_by_id(pbranch.branch_id).branch_name %> <br>
+		<%end%> <%end%>
+		</td>
+		<% end %>
 	</tr>
 	<% end %>
 </table>
-<br><!--
-<td> <%= product.product_name %> <%= link_to 'Edit', {:controller => 'product', :action => 'edit', :id => product.id} %>
-	<%= link_to 'Delete', {:controller => 'product', :action => 'destroy', :id => product.id} %> </td>
--->
-<%= link_to 'Add Product', :controller => 'product', :action => 'new' %>
 <br>
-<%= link_to 'Add Package', :controller => 'product', :action => 'add_package' %>
+<% if @curr_user.role != 'Cashier' %>
+<%= link_to 'Add Product', :controller => 'product', :action => 'new' %>
+<% end %>
 <br><br>

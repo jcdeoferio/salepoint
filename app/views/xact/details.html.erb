@@ -1,22 +1,38 @@
 <strong> Transaction Details </strong>
 <hr color="#eeddff" size="5px"><br>
-<table cellpadding="2" width="90%" align="center">
+<div id = "error"><%=h flash[:error] %></div><br>
+<table cellpadding="2" width="95%" align="center">
 <colgroup>
-	<col width ="170">
-	<col width ="170">
+	<col width ="90">
+	<col width ="90">
+	<col width ="90">
 </colgroup>
 <tr> <td>
 <% form_tag '/xact/add_details' do %>
 	Name of Product: <%= text_field 'product', 'product_name', "size"=>"30" %> <br><br>
 	Quantity: <%= text_field 'quantity', 'qty', "size"=>"10" %><br><br>
-        <table>
-        <th><%= button_to 'Next', :controller => 'xact', :action => 'details' %> </th>
-        <% end %> 
-        <th><%= button_to 'End', :action => 'xact_end' %></th>
-        </table>
+	<table>
+    <tr> <td> <%= button_to 'Next', :controller => 'xact', :action => 'details' %> <% end %> </td>
+    <td> <%= button_to 'End', :action => 'xact_end' %> </td>
+    </tr>
+    </table>
 </td>
 <td>
-<table border="1" rules="all" cellpadding="2">
+<table class="generic" align="center">
+<tr>
+	<th> Product </th>
+	<th> Stock </th>
+</tr>
+<% for product in @products %>
+	<tr>
+		<td> <%= Product.find_by_id(product.product_id).product_name %> </td>
+		<td> <%= product.stock %></td>
+	</tr>
+<% end %>
+</table>
+</td>
+<td>
+<table class="generic" align="center">
 <colgroup>
 	<col width="70">
 	<col width="150">
@@ -35,5 +51,6 @@
 </tr>
 <% end %>
 </table>
+Total = <%= @curr_xact.total %>
 </td></tr>
 </table>
