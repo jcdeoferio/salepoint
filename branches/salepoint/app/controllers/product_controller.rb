@@ -1,109 +1,117 @@
 class ProductController < ApplicationController
 	def index
+	  @curr_user = User.find_by_id(session[:u_id])
+	  if @curr_user.role != 'Administrator'
+	    @products = ProductBranch.find_all_by_branch_id(@curr_user.branch_id)
+	  else
 		@products = Product.all
-		@product = Product.find_by_id(params[:id])
-		@curr_user = User.find_by_userid(session[:userid])
+		@pbranch = ProductBranch.all
+	  end
 	end
 
 	def new
+	  @curr_user = User.find_by_id(session[:u_id])
 	end
 	
 	def create
+	  @curr_user = User.find_by_id(session[:u_id])
+	  @p = Product.find_by_product_name(params[:product][:product_name])
+	  if @p==nil
 		@product = Product.new(params[:product])
 		if @product.save
 			@productb = @product.product_branches.new()
 			@productb.product_id = @product.id
-			@productb.branch_id = User.find_by_userid(session[:userid]).branch_id
-			if @product.ptype
-				@productb.update_attribute("stock", params[:stockno][:stock])
-				redirect_to :action => 'index'
-				flash[:notice] = "Successfully added new product."
+			if @curr_user.role == 'Administrator'
+			  @productb.update_attribute("branch_id", Branch.find_by_branch_name(params[:branch][:name]).id)
+			  #session[:b_id] = Branch.find_by_branch_name(params[:branch][:name]).id
 			else
-				@product.update_attribute("ptype", 5)
-				session[:id] = @product.id
-				redirect_to :action => 'details'
-			end  
+			  @productb.update_attribute("branch_id", @curr_user.branch_id)
+			  #session[:b_id] = @curr_user.branch_id
+			end
+			@productb.update_attribute("stock", params[:stockno][:stock])
+			redirect_to :action => 'index'
+			flash[:notice] = "Successfully added new product."
 		else
+		  flash[:error] = "Error in input."
 		  redirect_to :action => 'new'
 		end
-	end
-  
-	def package_add
-		@product = Product.find_by_id(session[:id])
-		@productd = @product.details.new()
-		#@productd.pd_id = @product.id
-		@productd.product_id = Product.find_by_product_name(params[:product][:product_name]).id
-		if @product.save
-		  redirect_to :action => 'details'
-		else
-		  redirect_to :action => 'product'
-		end
+	  elsif (@curr_user.role=='Manager' and ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @p.id, @curr_user.branch_id]).first==nil)
+	      @productb = @p.product_branches.new()
+		  @productb.product_id = @p.id
+		  @productb.update_attribute("branch_id", @curr_user.branch_id)
+		  @productb.update_attribute("stock", params[:stockno][:stock])
+		  #session[:b_id] = @curr_user.branch_id
+		  redirect_to :action => 'index'
+		  flash[:notice] = "Successfully added new product."
+	  else
+	      flash[:error] = "Product " + params[:product][:product_name] + " already exists."
+	      redirect_to :action => 'new'
+	  end
 	end
     
-	def details
-		@product = Product.find_by_id(session[:id])
-		@details = @product.product_details.all
-	end
-  
-	def add_details
-		@product = Product.find_by_id(session[:id])
-		@productd = @product.product_details.new()
-		#@productd.pd_id = @product.id
-		@productd.product_id = Product.find_by_product_name(params[:product][:product_name]).id
-		if @productd.save
-		  redirect_to :action => 'details'
-		else
-		  redirect_to :action => 'index'
-		end
-	end
-  
 	def edit
-		session[:p_id] = (@product = Product.find_by_id(params[:id])).id
+	  if (@curr_user = User.find_by_id(session[:u_id])).role == 'Manager'
+    	session[:p_id] = (@product = Product.find_by_id(params[:id])).id
+ 	    #session[:b_id] = @curr_user.branch_id
+ 	  else
+ 	    @product = Product.find_by_id(session[:p_id])
+ 	    #session[:b_id] = Branch.find_by_branch_name(params[:branch][:name]).id
+ 	  end
+	end
+	
+	def editf
+	  session[:p_id] = Product.find_by_id(params[:id]).id
 	end
 
 	def update
 		@product = Product.find_by_id(session[:p_id])
 		if @product.update_attributes(params[:product])
+		  @branch = ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @product.id, Branch.find_by_id(session[:b_id]).id]).first
+		  @branch.update_attribute("stock", params[:stockno][:stock])
 		  flash[:notice] = "Successfully edited product " + @product.product_name
 		  redirect_to :action => 'index'
 		else
-		  redirect_to :action => 'index'
+		  flash[:error] = "Error in input."
+		  redirect_to :action => 'edit'
 		end
 	end
   
+    def destroy_admin
+      session[:p_id] = Product.find_by_id(params[:id]).id
+    end
+  
 	def destroy
-		@product = Product.find_by_id(params[:id])
+		if User.find_by_id(session[:u_id]).role=='Manager'
+		  @product = Product.find_by_id(params[:id])
+		  @productb = ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @product.id, User.find_by_id(session[:id]).branch_id]).first
+		else
+		  @product = Product.find_by_id(session[:p_id])
+		  @productb = ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @product.id, Branch.find_by_branch_name(params[:branch][:name]).id]).first
+		end
+		if ProductBranch.find_all_by_product_id(@product.id).size == 1
+		  @product.destroy
+		end
+		@productb.destroy
 		flash[:notice] = "Successfully deleted product"
-		@product.destroy
 		redirect_to :action => 'index'
 	end
-	
-	 def add_package
-    @products = Product.find(:all,:conditions => ['ptype != ?',5])
-    @productsF = Array.new
-    for prod in @products
-      @productsF[prod.id] = prod
+	  
+    def branch
+      session[:p_id] = (@product = Product.find_by_id(params[:id])).id
     end
-    if(params[:products] != nil)
-      
-      @prods = params[:products]
   
-      @prod = Product.new params[:product]
-      @prod.update_attribute("ptype", 5)
-
-      if @prod.save
-        @productb = @prod.product_branches.new()
-        @productb.product_id = @prod.id
-        @productb.branch_id = User.find_by_userid(session[:userid]).branch_id
-        @productb.save
-        for productid in @prods
-          @pd = @prod.product_details.new
-          @pd.update_attribute("product_id",productid)
-          @pd.save
-        end
+    def add_branch
+      @branch = ProductBranch.new()
+      if @branch.save
+        @branch.update_attribute("branch_id", Branch.find_by_branch_name(params[:branch][:branch_name]).id)
+        @branch.update_attribute("product_id", Product.find_by_id(session[:p_id]).id)
+        @branch.update_attribute("stock", params[:branch][:stock])
+        flash[:notice] = "Successfully added new branch for product " + Product.find_by_id(session[:p_id]).product_name + "."
+        redirect_to :action => 'index'
+      else
+        flash[:error] = "Error in input."
+        redirect_to :action => 'branch'
       end
-      flash[:notice] = "Successfully added package"
     end
-  end
 	
 end

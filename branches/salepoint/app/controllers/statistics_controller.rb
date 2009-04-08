@@ -1,9 +1,15 @@
 class StatisticsController < ApplicationController
   def index
-    @products = Product.all
+    @curr_user = User.find_by_id(session[:u_id])
+    if @curr_user.role != 'Administrator'
+	  @products = ProductBranch.find_all_by_branch_id(@curr_user.branch_id)
+	else
+      @products = Product.all
+	end
     @users = User.all
     @branches = Branch.all
-    @curr_user = User.find_by_userid(session[:userid])
+    @xacts = Xact.all
+    @pbranch = ProductBranch.all
   end
   def userSales
     if(params[:id])

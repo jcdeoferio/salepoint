@@ -1,26 +1,60 @@
+<table width="100%">
+	<tr>
+	<td> <strong> Statistics </strong> </td>
+	<td align="right"> <%= link_to 'Logout', :controller => 'login', :action => 'logout' %> </td>
+	</tr>
+</table>
+<hr color="#eeddff" size="5px"><br>
 Products
 <table class="generic" align="center">
 	<colgroup>
 		<col width="200">
 		<col width="50">
 		<col width="50">
+		<% if @curr_user.role == 'Administrator' %>
+		<col width="50">
+		<% end %>
 		<col width="50">
 	</colgroup>
 	<tr>
 		<th>Product Name</th>
 		<th>Type</th>
 		<th>Unit Price</th>
+		<% if @curr_user.role == 'Administrator' %>
+		<th> Branch </th>
+		<% end %>
 		<th>Stock Left</th>
 	</tr>
 	<% for product in @products %>
 	<tr>
+		<% if @curr_user.role!='Administrator' %>
+		<td><%= Product.find_by_id(product.product_id).product_name %> <%= link_to 'Sales', {:controller => 'statistics', :action => 'productSales', :id => product.product_id} %></td>
+		<td> <center> <%= Product.find_by_id(product.product_id).ptype %></td>
+		<td> <center> <%= Product.find_by_id(product.product_id).unit_price%></td>
+		<% else %>
 		<td><%= product.product_name %> <%= link_to 'Sales', {:controller => 'statistics', :action => 'productSales', :id => product.id} %></td>
-		<td><%= product.ptype %></td>
-		<td><%= product.unit_price%></td>
-		<td><%= ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', product.id, @curr_user.branch_id]).first.stock %> </td>
+		<td> <center> <%= product.ptype %></td>
+		<td> <center> <%= product.unit_price %></td>
+		<td><center>
+		<% for pbranch in @pbranch %>
+		<% if pbranch.product_id == product.id %>
+			<%= Branch.find_by_id(pbranch.branch_id).branch_name %> <br>
+		<%end%> <%end%>
+		</td>
+		<% end %>
+		<td><center>
+		<% if @curr_user.role != 'Administrator' %>
+		<%= product.stock %>
+		<% else %>
+		<% for pbranch in @pbranch %>
+		<% if pbranch.product_id == product.id%>
+			<%= pbranch.stock %>
+		<% end %> <% end %>
+		<% end %>
+		</td>
 	</tr>
 	<% end %>
-</table>
+</table><br>
 
 Users
 <table class="generic" align="center">
@@ -42,7 +76,7 @@ Users
 			<td><%= user.created_at%></td>
 		</tr>
 	<%end%>
-</table>
+</table><br>
 
 Branches
 <table class="generic" align="center">
@@ -63,7 +97,36 @@ Branches
 		<td><%= branch.branch_name %> <%= link_to 'Sales', {:controller => 'statistics', :action => 'branchSales', :id => branch.id} %></td>
 		<td></td>
 		<td><%= branch.branch_address%></td>
-		<td></td>
+		<td> <%= User.all(:conditions => ['branch_id=? AND role=?', branch.id, 'Manager']).first.last_name %>, <%= User.all(:conditions => ['branch_id=? AND role=?', branch.id, 'Manager']).first.first_name %> </td>
 	</tr>
 <% end %>
+</table><br>
+
+Transactions
+<table class="generic" align="center">
+	<colgroup>
+		<col width="100">
+		<col width="100">
+		<col width="50">
+		<col width="50">
+		<col width="50">
+	</colgroup>
+	<tr>
+		<th>Date</th>
+		<th>Employee</th>
+		<th>Quantity</th>
+		<th>Total</th>
+		<th> </th>
+	</tr>
+	<% for xact in @xacts %>
+	<tr>
+		<td> <%= xact.created_at %> </td>
+		<td> <center> <%= User.find_by_id(xact.user_id).last_name %>, <%= User.find_by_id(xact.user_id).first_name %> </td>
+		<td> <center> <%= xact.qty %> </td>
+		<td> <center> <%= xact.total %> </td>
+		<td> <center> <%= link_to 'Details', :controller => 'xact', :action => 'xdetails', :id => xact.id %>
+			 <% if User.find_by_id(session[:u_id]).role=='Administrator' %> <%= link_to 'Delete', :controller => 'xact', :action => 'destroy', :id => xact.id %> <%end%> </td>
+	</tr>
+	<% end %>
 </table>
+<br><br>

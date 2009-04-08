@@ -1,6 +1,7 @@
 <strong> Add New Product </strong>
 <hr color="#eeddff" size="5px"><br>
-<br>
+<div id = "error"><%=h flash[:error] %></div>
+<div id = "notification"><%=h flash[:notice] %></div><br>
 <% form_tag '/product/create' do %>
 	Name of Product: <%= text_field 'product', 'product_name', "size"=>"50" %> <br><br>
 	Select Product Category:
@@ -8,6 +9,9 @@
 	<br><br>
 	Unit Price: <%= text_field 'product', 'unit_price', "size"=>"20" %><br><br>
 	Stock: <%= text_field 'stockno', 'stock', "size"=>"10" %><br><br>
+	<% if @curr_user.role == 'Administrator' %>
+	Branch Name: <%= text_field 'branch', 'name', "size"=>"10" %><br><br>
+	<% end %>
         <table>
         <th><%= submit_tag 'Submit' %> </th> 
 		<% end %>

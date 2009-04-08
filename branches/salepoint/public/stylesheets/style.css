@@ -3,6 +3,11 @@
     background-color: #33333;
     font-weight: bold;
 }
+#error {
+    color: red;
+    background-color: #33333;
+    font-weight: bold;
+}
 div#header{
 	background-color:#ccccff;
 }

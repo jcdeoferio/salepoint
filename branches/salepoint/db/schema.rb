@@ -13,7 +13,29 @@ ActiveRecord::Schema.define(:version => 20090406115753) do
 
   create_table "branches", :force => true do |t|
     t.string   "branch_name"
+    t.string   "contact_no"
     t.string   "branch_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_details", :force => true do |t|
+    t.integer  "t_id"
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "package_details", :force => true do |t|
+    t.integer  "package_id"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "packages", :force => true do |t|
+    t.string   "package_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +58,12 @@ ActiveRecord::Schema.define(:version => 20090406115753) do
     t.string   "product_name"
     t.integer  "ptype"
     t.integer  "unit_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transaction_types", :force => true do |t|
+    t.string   "transaction"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

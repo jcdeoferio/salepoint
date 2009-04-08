@@ -3,15 +3,15 @@ class LoginController < ApplicationController
   def login
    @current_user = User.find_by_userid( params[:login] ) 
     if @current_user
-      session[:userid] = @current_user.userid
+      session[:u_id] = @current_user.id
       
       case @current_user.role
         when 'Manager'
           redirect_to :controller => 'manager', :action => 'index'
         when 'Cashier'
           redirect_to :controller => 'cashier', :action => 'index'
-        when 'ADMINISTRATOR'
-          redirect_to :controller => 'administrators', :action => 'index'
+        when 'Administrator'
+          redirect_to :controller => 'manager', :action => 'index'
         else
           render :action => 'login'
       end
