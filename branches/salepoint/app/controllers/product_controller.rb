@@ -52,7 +52,7 @@ class ProductController < ApplicationController
 	def edit
 	  if (@curr_user = User.find_by_id(session[:u_id])).role == 'Manager'
     	session[:p_id] = (@product = Product.find_by_id(params[:id])).id
- 	    #session[:b_id] = @curr_user.branch_id
+ 	    session[:b_id] = @curr_user.branch_id
  	  else
  	    @product = Product.find_by_id(session[:p_id])
  	    #session[:b_id] = Branch.find_by_branch_name(params[:branch][:name]).id
@@ -83,7 +83,7 @@ class ProductController < ApplicationController
 	def destroy
 		if User.find_by_id(session[:u_id]).role=='Manager'
 		  @product = Product.find_by_id(params[:id])
-		  @productb = ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @product.id, User.find_by_id(session[:id]).branch_id]).first
+		  @productb = ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @product.id, User.find_by_id(session[:u_id]).branch_id]).first
 		else
 		  @product = Product.find_by_id(session[:p_id])
 		  @productb = ProductBranch.all(:conditions => ['product_id=? AND branch_id=?', @product.id, Branch.find_by_branch_name(params[:branch][:name]).id]).first

@@ -1,0 +1,13 @@
+<strong> Add New Branch </strong>
+<hr color="#eeddff" size="5px"><br>
+<div id = "error"><%=h flash[:error] %></div>
+<div id = "notification"><%=h flash[:notice] %></div><br>
+<% form_tag '/branch/create' do %>
+	Name of Branch: <%= text_field 'branch', 'branch_name', "size"=>"30" %> <br><br>
+	Contact No.: <%= text_field 'branch', 'contact_no', "size"=>"20" %><br><br>
+	Address: <%= text_field 'branch', 'branch_address', "size"=>"50" %><br><br>
+        <table>
+        <th><%= submit_tag 'Submit' %> </th> 
+		<% end %>
+        <th><%= button_to 'Cancel', :action => 'branch' %></th>
+        </table>

@@ -1,6 +1,8 @@
 <strong> Transaction </strong>
 <hr color="#eeddff" size="5px"><br>
+
 <% form_tag '/xact/create' do %>
+
 <%= Date.today %><br><br>
 <% if User.find_by_id(session[:u_id]).role != 'Administrator' %>
 <%= submit_tag 'Begin' %>

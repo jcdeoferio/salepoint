@@ -19,7 +19,7 @@ content="text/html; charset=utf-8" />
 		<%= request.path != '/' ?
 		link_to(image_tag("home.png", :border=>0), {:controller => 'manager', :action => 'index'})+
 		link_to(image_tag("products.png", :border=>0), {:controller => 'product', :action => 'index'})+
-		link_to(image_tag("xacts.png", :border=>0), {:controller => 'xact', :action => 'index'})+
+		link_to(image_tag("xacts.png", :border=>0), {:controller => 'xact', :action => 'index', :sum => 0, :qty => 0})+
 		link_to(image_tag("data.png", :border=>0), {:controller => 'statistics', :action => 'index'})+
 		link_to(image_tag("users.png",  :border=>0), {:controller => 'user', :action =>'index'})+
 		link_to(image_tag("branches.png", :border=>0), {:controller => 'branch', :action => 'branch'})+

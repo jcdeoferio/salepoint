@@ -121,7 +121,9 @@ Transactions
 	<% for xact in @xacts %>
 	<tr>
 		<td> <%= xact.created_at %> </td>
-		<td> <center> <%= User.find_by_id(xact.user_id).last_name %>, <%= User.find_by_id(xact.user_id).first_name %> </td>
+		<td> <center> <% if User.find_by_id(xact.user_id) != nil %>
+		<%= User.find_by_id(xact.user_id).last_name %>, <%= User.find_by_id(xact.user_id).first_name %>
+		<% else %> Employee already removed. </td> <% end %>
 		<td> <center> <%= xact.qty %> </td>
 		<td> <center> <%= xact.total %> </td>
 		<td> <center> <%= link_to 'Details', :controller => 'xact', :action => 'xdetails', :id => xact.id %>

@@ -1,0 +1,30 @@
+<strong> Transactions </strong>
+<hr color="#eeddff" size="5px"><br>
+<div id = "notification"><%=h flash[:notice] %></div><br>
+<table class="generic" align="center">
+	<colgroup>
+		<col width="100">
+		<col width="100">
+		<col width="50">
+		<col width="50">
+		<col width="50">
+	</colgroup>
+	<tr>
+		<th>Date</th>
+		<th>Employee</th>
+		<th>Quantity</th>
+		<th>Total</th>
+		<th> </th>
+	</tr>
+	<% for xact in @xacts %>
+	<tr>
+		<td> <%= xact.created_at %> </td>
+		<td> <center> <%= User.find_by_id(xact.user_id).last_name %>, <%= User.find_by_id(xact.user_id).first_name %> </td>
+		<td> <center> <%= xact.qty %> </td>
+		<td> <center> <%= xact.total %> </td>
+		<td> <center> <%= link_to 'Details', :controller => 'xact', :action => 'xdetails', :id => xact.id %>
+			 <% if @curr_user.role=='Administrator' %> <%= link_to 'Delete', :controller => 'xact', :action => 'destroy', :id => xact.id %> <%end%> </td>
+	</tr>
+	<% end %>
+</table>
+<br>

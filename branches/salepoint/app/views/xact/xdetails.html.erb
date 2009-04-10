@@ -1,0 +1,27 @@
+<strong> Transaction Details </strong>
+<hr color="#eeddff" size="5px">
+Transaction at <%= @xact.created_at %> by Employee <%= User.find_by_id(@xact.user_id).first_name %> <%= User.find_by_id(@xact.user_id).last_name %>
+<br><br>
+<table class="generic" align="center">
+<colgroup>
+	<col width="70">
+	<col width="150">
+	<col width="70">
+</colgroup>
+<tr>
+<th> Quantity </th>
+<th> Product </th>
+<th> Price </th>
+</tr>
+<% for detail in @details %>
+<tr>
+<td> <%= detail.quantity %>
+<td> <%= Product.find_by_id(detail.product_id).product_name %> </td>
+<td> <%= detail.price%>
+</tr>
+<% end %>
+</table> <br>
+<strong>
+Quantity = <%= @xact.qty %> <br>
+Total = P<%= @xact.total %>
+</strong>
