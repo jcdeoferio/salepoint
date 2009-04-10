@@ -29,7 +29,7 @@
 		<td><%= branch.branch_name %></td>
 		<td><%= branch.contact_no %></td>
 		<td><%= branch.branch_address%></td>
-		<td></td>
+		<td> <%= User.all(:conditions => ['branch_id=? AND role=?', branch.id, 'Manager']).first.last_name %>, <%= User.all(:conditions => ['branch_id=? AND role=?', branch.id, 'Manager']).first.first_name %> </td>
 		<% if @curr_user.role == 'Administrator' %> <td>
 			<%= link_to 'Edit', :controller => 'branch', :action => 'edit', :id => branch.id %>
 			<%= link_to 'Delete', :controller => 'branch', :action => 'destroy', :id => branch.id %>
